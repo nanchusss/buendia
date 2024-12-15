@@ -1,69 +1,38 @@
-import { HashRouter, Route, Routes, Navigate } from "react-router-dom";
-import Home from "./pages/Home";
-import Blog from "./pages/Blog/Blog";
+import React, { useState } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
-import InspirationPage from "./pages/Inspiration/Inspiration";
-import Login from "./pages/Login/Login";
-import Quiz from "./pages/Quizz/Quizz";
+import Home from "./pages/Home";
+import Blog from "./pages/Blog/Blog";
 import ContactForm from "./pages/Contacto/Contacto";
-import ProtectedRoute from "./components/Protected-routes";
-import { useContext } from "react";
-import { MyContext } from "../src/Context";
 import Productes from "./components/Productes/productes";
+import Quiz from "./pages/Quizz/Quizz";
 
 const Router = () => {
-  const {
-    state,
-    handleState,
-    handleShowBlog,
-    handleSetAlreadyLogged,
-    handleShowForm,
-    login,
-    showForm,
-    alreadyLogged,
-    handleLogin,
-    showBlog,
-    showQuizz,
-    handleShowQuizz,
-    setAlreadyLogged,
-  } = useContext(MyContext);
+  const [currentPage, setCurrentPage] = useState("home");
+
+  // Funciones para cambiar el estado de la página actual
+  const showHome = () => setCurrentPage("home");
+  const showBlog = () => setCurrentPage("blog");
+  const showContact = () => setCurrentPage("contact");
+  const showProducts = () => setCurrentPage("products");
+  const showQuiz = () => setCurrentPage("quiz");
 
   return (
     <>
-      <Header handleLogin={handleLogin} handleShowQuizz={handleShowQuizz} />
-      <HashRouter>
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Home
-                handleShowQuizz={handleShowQuizz}
-                state={state}
-                handleState={handleState}
-                handleShowBlog={handleShowBlog}
-                showBlog={showBlog}
-                handleSetAlreadyLogged={handleSetAlreadyLogged}
-                handleShowForm={handleShowForm}
-              />
-            }
-          />
-          <Route path="/Blog" element={<Blog />} />
-          <Route path="/Contacte" element={<ContactForm />} />
-          <Route path="/Quizz" element={<Quiz />} />
-          <Route path="/Login" element={<Login />} />
-          <Route path="/Productes" element={<Productes />} />
-          <Route
-            path="/Inspiration"
-            element={
-              <ProtectedRoute alreadyLogged={alreadyLogged}>
-                <InspirationPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="*" element={<div>404 - Página no encontrada</div>} />
-        </Routes>
-      </HashRouter>
+      <Header
+        showHome={showHome}
+        showBlog={showBlog}
+        showContact={showContact}
+        showProducts={showProducts}
+        handleShowQuizz={showQuiz}
+      />
+      <main>
+        {currentPage === "home" && <Home />}
+        {currentPage === "blog" && <Blog />}
+        {currentPage === "contact" && <ContactForm />}
+        {currentPage === "products" && <Productes />}
+        {currentPage === "quiz" && <Quiz />}
+      </main>
       <Footer />
     </>
   );

@@ -1,24 +1,18 @@
 import React from "react";
 import { Navbar, Nav, Button } from "react-bootstrap";
+import { NavbarContainer, Logo, NavLinks, styles } from "./Header-styles";
+import LogoMarca from "../../Images/Logo.jpeg";
 
-import {
-  NavbarContainer,
-  Logo,
-  NavLinks,
-  styles,
-  //ButtonsHeader,
-  //ButtonsHeader2,
-} from "./Header-styles";
-import LogoMarca from "..//.//../Images/Logo.jpeg";
-
-const Header = ({ handleLogin, handleShowQuizz }) => {
-  //isLoggedIn posee la info de mail
-  const isLoggedIn = localStorage.getItem("email");
-
+const Header = ({
+  showHome,
+  showBlog,
+  showContact,
+  showProducts,
+  handleShowQuizz,
+}) => {
   const handleLogout = () => {
     localStorage.removeItem("email");
     window.location.reload();
-    // Recarga la página para actualizar el estado de inicio de sesión, osea cierra sesión.
   };
 
   return (
@@ -35,7 +29,7 @@ const Header = ({ handleLogin, handleShowQuizz }) => {
         <Logo
           src={LogoMarca}
           alt="Logo"
-          style={{ width: "80px", height: "80px", objectFit: "contain" }} // Ajusta el tamaño del logo
+          style={{ width: "80px", height: "80px", objectFit: "contain" }}
         />
         <span
           style={{
@@ -51,17 +45,16 @@ const Header = ({ handleLogin, handleShowQuizz }) => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <NavLinks className="mr-auto mt-3 ">
-          <Nav.Link style={styles.link} href="/" className="ml-2">
+          <Nav.Link style={styles.link} onClick={showHome}>
             Inici
           </Nav.Link>
-
-          <Nav.Link style={styles.link} href="/blog">
+          <Nav.Link style={styles.link} onClick={showBlog}>
             Blog
           </Nav.Link>
-          <Nav.Link style={styles.link} href="/contacte" className="ml-2">
+          <Nav.Link style={styles.link} onClick={showContact}>
             Contacte
           </Nav.Link>
-          <Nav.Link style={styles.link} href="/productes" className="ml-2">
+          <Nav.Link style={styles.link} onClick={showProducts}>
             Productes
           </Nav.Link>
         </NavLinks>
