@@ -10,34 +10,6 @@ import {
   //ButtonsHeader2,
 } from "./Header-styles";
 import LogoMarca from "..//.//../Images/Logo.jpeg";
-import { useContext } from "react";
-import { MyContext } from "../../Context.js";
-import {
-  StyledHeader,
-  StyledImage,
-  StyledTitle,
-  StyledSubtitle,
-  Fondo,
-  GridItem,
-  Grid,
-  Image,
-  Title,
-  Container2,
-  Btn,
-  StyledButton,
-  ContainerSection,
-  CustomCard,
-  CustomCardImg,
-  CustomCardTitle,
-  CustomCardText,
-} from "../PaintPage/PaintPage/PaintPage-Styles.js";
-import Image2 from "../PaintPage/PaintPage/images/pareja presupuesto.jpg";
-import ofrecer1 from "../PaintPage/PaintPage/images/ofrecer1.png";
-import ofrecer2 from "../PaintPage/PaintPage/images/ofrecer2.png";
-import ofrecer3 from "../PaintPage/PaintPage/images/ofrecer3.png";
-import ofrecer4 from "../PaintPage/PaintPage/images/ofrecer4.png";
-import pensamosenti2 from "../PaintPage/PaintPage/images/blog.jpg";
-import pensamosenti3 from "../PaintPage/PaintPage/images/contact.jpg";
 
 const Header = ({
   handleLogin,
