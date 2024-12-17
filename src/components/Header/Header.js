@@ -1,43 +1,14 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  Button,
-  Card,
-  Container,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import LogoMarca from "../../Images/Logo.jpeg";
 
-import {
-  NavbarContainer,
-  Logo,
-  NavLinks,
-  styles,
-  //ButtonsHeader,
-  //ButtonsHeader2,
-} from "./Header-styles";
-import LogoMarca from "..//.//../Images/Logo.jpeg";
-
-const Header = ({
-  handleLogin,
-  handleShowQuizz,
-  handleShowBlog,
-  handelShowForm,
-}) => {
-  //isLoggedIn posee la info de mail
-  const isLoggedIn = localStorage.getItem("email");
-
-  const handleLogout = () => {
-    localStorage.removeItem("email");
-    window.location.reload();
-    // Recarga la página para actualizar el estado de inicio de sesión, osea cierra sesión.
-  };
-
+const Header = () => {
   return (
-    <NavbarContainer bg="light" expand="lg" className="mb-5">
+    <Navbar bg="light" expand="lg" className="mb-5">
       <Navbar.Brand
-        href="#"
+        as={Link}
+        to="/"
         style={{
           textAlign: "center",
           display: "flex",
@@ -45,10 +16,10 @@ const Header = ({
           gap: "10px",
         }}
       >
-        <Logo
+        <img
           src={LogoMarca}
           alt="Logo"
-          style={{ width: "80px", height: "80px", objectFit: "contain" }} // Ajusta el tamaño del logo
+          style={{ width: "80px", height: "80px", objectFit: "contain" }}
         />
         <span
           style={{
@@ -64,28 +35,31 @@ const Header = ({
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <NavLinks className="mr-auto mt-3 ">
-          <Nav.Link style={styles.link} href="/" className="ml-2">
+        <Nav className="mr-auto mt-3">
+          <Nav.Link as={Link} to="/">
             Inici
           </Nav.Link>
-
-          <Nav.Link onClick={handleShowBlog} href="/blog">
+          <Nav.Link as={Link} to="/blog">
             Blog
           </Nav.Link>
-          <Nav.Link onClick={handelShowForm} href="/contacte" className="ml-2">
+          <Nav.Link as={Link} to="/contacte">
             Contacte
           </Nav.Link>
-          <Nav.Link style={styles.link} href="/productes" className="ml-2">
+          <Nav.Link as={Link} to="/productes">
             Productes
           </Nav.Link>
-        </NavLinks>
+        </Nav>
         <Nav>
-          <Button variant="success" className="m-3" onClick={handleShowQuizz}>
-            Sol.licitar pressupost
+          <Button
+            variant="success"
+            className="m-3"
+            onClick={() => (window.location.hash = "#/quizz")}
+          >
+            Sol·licitar pressupost
           </Button>
         </Nav>
       </Navbar.Collapse>
-    </NavbarContainer>
+    </Navbar>
   );
 };
 
