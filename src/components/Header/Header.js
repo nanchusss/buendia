@@ -1,43 +1,15 @@
 import React from "react";
-import {
-  Navbar,
-  Nav,
-  Button,
-  Card,
-  Container,
-  Row,
-  Col,
-} from "react-bootstrap";
+import { Navbar, Nav, Button } from "react-bootstrap";
+import { Link } from "react-router-dom"; // Importa Link
+import { NavbarContainer, Logo, NavLinks, styles } from "./Header-styles";
+import LogoMarca from "../../Images/Logo.jpeg";
 
-import {
-  NavbarContainer,
-  Logo,
-  NavLinks,
-  styles,
-  //ButtonsHeader,
-  //ButtonsHeader2,
-} from "./Header-styles";
-import LogoMarca from "..//.//../Images/Logo.jpeg";
-
-const Header = ({
-  handleLogin,
-  handleShowQuizz,
-  handleShowBlog,
-  handelShowForm,
-}) => {
-  //isLoggedIn posee la info de mail
-  const isLoggedIn = localStorage.getItem("email");
-
-  const handleLogout = () => {
-    localStorage.removeItem("email");
-    window.location.reload();
-    // Recarga la página para actualizar el estado de inicio de sesión, osea cierra sesión.
-  };
-
+const Header = ({ handleShowQuizz }) => {
   return (
     <NavbarContainer bg="light" expand="lg" className="mb-5">
       <Navbar.Brand
-        href="#"
+        as={Link}
+        to="/"
         style={{
           textAlign: "center",
           display: "flex",
@@ -48,7 +20,7 @@ const Header = ({
         <Logo
           src={LogoMarca}
           alt="Logo"
-          style={{ width: "80px", height: "80px", objectFit: "contain" }} // Ajusta el tamaño del logo
+          style={{ width: "80px", height: "80px", objectFit: "contain" }}
         />
         <span
           style={{
@@ -64,18 +36,17 @@ const Header = ({
 
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <NavLinks className="mr-auto mt-3 ">
-          <Nav.Link style={styles.link} href="/" className="ml-2">
+        <NavLinks className="mr-auto mt-3">
+          <Nav.Link as={Link} to="/" className="ml-2">
             Inici
           </Nav.Link>
-
-          <Nav.Link onClick={handleShowBlog} href="/blog">
+          <Nav.Link as={Link} to="/blog">
             Blog
           </Nav.Link>
-          <Nav.Link onClick={handelShowForm} href="/contacte" className="ml-2">
+          <Nav.Link as={Link} to="/contacte" className="ml-2">
             Contacte
           </Nav.Link>
-          <Nav.Link style={styles.link} href="/productes" className="ml-2">
+          <Nav.Link as={Link} to="/productes" className="ml-2">
             Productes
           </Nav.Link>
         </NavLinks>
