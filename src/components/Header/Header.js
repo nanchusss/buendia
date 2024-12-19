@@ -65,14 +65,14 @@ const Header = ({
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <NavLinks className="mr-auto mt-3 ">
-          <Nav.Link style={styles.link} href="/" className="ml-2">
+          <Nav.Link style={styles.link} href="#/" className="ml-2">
             Inici
           </Nav.Link>
 
-          <Nav.Link onClick={handleShowBlog} href="/blog">
+          <Nav.Link onClick={handleShowBlog} href="#/blog">
             Blog
           </Nav.Link>
-          <Nav.Link onClick={handelShowForm} href="/contacte" className="ml-2">
+          <Nav.Link onClick={handelShowForm} href="#/contacte" className="ml-2">
             Contacte
           </Nav.Link>
           <Nav.Link style={styles.link} href="/productes" className="ml-2">
