@@ -14,7 +14,7 @@ function PasarelaImagenes() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <Titulo>Vols renovar el teu llar?</Titulo>
+          <Titulo>Vols renovar la teva llar </Titulo>
           <Subtitulo> A FINESTRACAT som al teu servei</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>

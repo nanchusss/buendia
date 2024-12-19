@@ -58,7 +58,7 @@ export const NavLinks = styled(Nav)`
     display: flex;
     border-radius: 4px;
     flex-direction: column;
-    background-color: rgba(250, 247, 247, 0.755);
+    background-color: rgb(250, 247, 247);
   }
 `;
 
