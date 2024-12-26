@@ -5,6 +5,7 @@ import Card from "react-bootstrap/Card";
 export const FooterCard = styled(Card)`
   background-color: #4d4d4d;
   display: flex;
+  border-radius: 0;
   color: #ffffff;
   flex-direction: column;
   justify-content: center;

@@ -46,7 +46,7 @@ const Blog = () => {
   return (
     <>
       <Title
-        style={{ color: "#234564", marginTop: "100px", textAlign: "center" }}
+        style={{ color: "#234564", marginTop: "150px", textAlign: "center" }}
       >
         Blog
       </Title>
