@@ -18,6 +18,7 @@ export const FooterTitle = styled(Card.Title)`
 export const FooterTitle2 = styled(Card.Title)`
   margin-top: 5px;
   font-size: 35px;
+  background-color: none;
   text-align: center;
 `;
 

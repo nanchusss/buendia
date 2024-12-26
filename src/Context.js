@@ -7,11 +7,23 @@ const MyProvider = ({ children }) => {
   const [login, setLogin] = useState(false);
   const [alreadyLogged, setAlreadyLogged] = useState(false);
   const [showBlog, setShowBlog] = useState(false);
+  const [showProductes, setShowProductes] = useState(false);
+  const [showInici, setShowInici] = useState(false);
   const [showQuizz, setShowQuizz] = useState(false);
   const [showForm, setShowForm] = useState(false);
 
   const handleShowForm = () => {
     setShowForm(true);
+  };
+
+  const handleShowInici = () => {
+    console.log("mostrando inici");
+    setShowInici(true);
+  };
+
+  const handleShowProductes = () => {
+    console.log("Show Productes");
+    setShowProductes(true);
   };
 
   const handleShowBlog = () => {
@@ -54,6 +66,12 @@ const MyProvider = ({ children }) => {
         setAlreadyLogged,
         showBlog,
         setShowBlog,
+        setShowInici,
+        handleShowInici,
+        handleShowProductes,
+        setShowProductes,
+        showInici,
+        showProductes,
         showQuizz,
         setShowQuizz,
         showForm,

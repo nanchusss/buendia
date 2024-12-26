@@ -15,7 +15,7 @@ export const QuizCard = styled(Card)`
   border-radius: 10px;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
   @media (max-width: 767px) {
-    margin-top: 150px;
+    margin-top: 180px;
   }
 `;
 export const Formy = styled(Form)`

@@ -10,9 +10,7 @@ import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 function Footer() {
   return (
     <FooterCard>
-      <Card.Header style={{ marginTop: "20px" }}>
-        <FooterTitle2>FINESTRACAT</FooterTitle2>{" "}
-      </Card.Header>
+      <FooterTitle2 style={{ marginTop: "40px" }}>FINESTRACAT</FooterTitle2>{" "}
       <Card.Body className="text-center">
         <FooterTitle>Barcelona, Girona i Tarragona</FooterTitle>
         <Card.Text>

@@ -40,6 +40,7 @@ const PaintPage = () => {
     handleShowQuizz,
     handleShowForm,
   } = useContext(MyContext);
+
   return (
     <>
       <StyledHeader>
