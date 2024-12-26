@@ -32,14 +32,9 @@ import { MyContext } from "../../../Context.js";
 
 const PaintPage = () => {
   //acá pongo la constante si está loggeado el usuario o no. y luego la voy a poner como condicional para que si está loggeado me haga el onclick y si no me redirija
-  const isLoggedIn = localStorage.getItem("email");
-  const {
-    handleState,
-    state,
-    handleShowBlog,
-    handleShowQuizz,
-    handleShowForm,
-  } = useContext(MyContext);
+  // const isLoggedIn = localStorage.getItem("email");
+  const { handleShowBlog, handleShowQuizz, handleShowForm } =
+    useContext(MyContext);
 
   return (
     <>

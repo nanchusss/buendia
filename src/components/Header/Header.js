@@ -96,19 +96,19 @@
 
 // export default Header;
 import React from "react";
-import { Navbar, Button, Nav } from "react-bootstrap";
-import { NavbarContainer, Logo, styles, Button1 } from "./Header-styles";
+import { Navbar, Button } from "react-bootstrap";
+import { NavbarContainer, Logo, Button1 } from "./Header-styles";
 import LogoMarca from "..//.//../Images/Logo.jpeg";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
-  const location = useLocation(); // Detectar la ruta actual
+  // const location = useLocation(); // Detectar la ruta actual
 
-  const handleLogout = () => {
-    localStorage.removeItem("email");
-    navigate("/login"); // Redirige a la página de login
-  };
+  // const handleLogout = () => {
+  //   localStorage.removeItem("email");
+  //   navigate("/login"); // Redirige a la página de login
+  // };
 
   return (
     <NavbarContainer bg="light" expand="lg" className="mb-5">

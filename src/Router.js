@@ -221,7 +221,7 @@
 // };
 
 // export default Router;
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Blog from "./pages/Blog/Blog";
 import Header from "./components/Header/Header";
@@ -238,23 +238,11 @@ import { MyContext } from "../src/Context";
 
 const Router = () => {
   const {
-    state,
-    handleState,
-    handleShowBlog,
-    handleSetAlreadyLogged,
-    handleShowForm,
-    handleInici,
-    handleProductes,
-    login,
     showForm,
-    alreadyLogged,
-    handleLogin,
+
     showBlog,
-    showProductes,
-    showInici,
+
     showQuizz,
-    handleShowQuizz,
-    setAlreadyLogged,
   } = useContext(MyContext);
   useEffect(() => {
     if (showQuizz) {
