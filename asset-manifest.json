@@ -1,7 +1,9 @@
+
+
 {
   "files": {
     "main.css": "/static/css/main.1d80a001.css",
-    "main.js": "/static/js/main.e0ed26f4.js",
+    "main.js": "/static/js/main.453660ce.js",
     "static/media/pareja presupuesto.jpg": "/static/media/pareja presupuesto.8d1bcb5e571e98d8356a.jpg",
     "static/media/interior3.png": "/static/media/interior3.0c16b0ec6fbf5c889f8d.png",
     "static/media/PAREJA.png": "/static/media/PAREJA.dd92c71d505c2437c1c6.png",
@@ -18,10 +20,10 @@
     "static/media/ofrecer1.png": "/static/media/ofrecer1.e849064891bb42a22640.png",
     "index.html": "/index.html",
     "main.1d80a001.css.map": "/static/css/main.1d80a001.css.map",
-    "main.e0ed26f4.js.map": "/static/js/main.e0ed26f4.js.map"
+    "main.453660ce.js.map": "/static/js/main.453660ce.js.map"
   },
   "entrypoints": [
     "static/css/main.1d80a001.css",
-    "static/js/main.e0ed26f4.js"
+    "static/js/main.453660ce.js"
   ]
 }
