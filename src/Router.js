@@ -244,11 +244,13 @@ const Router = () => {
 
     showQuizz,
   } = useContext(MyContext);
+
   useEffect(() => {
     if (showQuizz) {
       window.location.href = "/quizz";
     }
   }, [showQuizz]);
+
   useEffect(() => {
     if (showBlog) {
       window.location.href = "/blog";
