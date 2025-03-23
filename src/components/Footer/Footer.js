@@ -15,7 +15,7 @@ function Footer() {
         <FooterTitle>Barcelona, Girona i Tarragona</FooterTitle>
         <Card.Text>
           <FooterTitle>
-            finestracat@gmail.com / Tel. 691292245 / Tel. 621187067
+            info@finestracat.com / Tel. 691292245 / Tel. 621187067
           </FooterTitle>
         </Card.Text>
         <a
