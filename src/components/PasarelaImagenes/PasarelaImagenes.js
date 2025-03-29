@@ -27,7 +27,7 @@ function PasarelaImagenes() {
 
         <Carousel.Caption>
           <Titulo>FINESTRACAT</Titulo>
-          <Subtitulo>"La millor oferta"</Subtitulo>
+          <Subtitulo>La teva finestra</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
