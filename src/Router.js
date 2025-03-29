@@ -232,7 +232,7 @@ import Login from "./pages/Login/Login";
 import Quiz from "./pages/Quizz/Quizz";
 import ContactForm from "./pages/Contacto/Contacto";
 import ProtectedRoute from "./components/Protected-routes";
-import Productes from "./components/Productes/Productes";
+import Productes from "./components/Productes/ProductesTemporal";
 import { useContext, useEffect } from "react";
 import { MyContext } from "../src/Context";
 
