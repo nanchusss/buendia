@@ -174,7 +174,7 @@ const Quiz = () => {
             </Card.Body>
           </QuizCard>
         )}
-        {/* {page === 4 && (
+        {page === 4 && (
           <QuizCard>
             <Card.Body>
               <Title>¿T'interessa Alumini o PVC?</Title>
@@ -198,8 +198,8 @@ const Quiz = () => {
               </OptionButton>
             </Card.Body>
           </QuizCard>
-        )} */}
-        {page === 4 && (
+        )}
+        {page === 5 && (
           <QuizCard>
             <Card.Body>
               <Title>
