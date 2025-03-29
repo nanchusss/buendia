@@ -27,7 +27,7 @@ function PasarelaImagenes() {
 
         <Carousel.Caption>
           <Titulo>FINESTRACAT</Titulo>
-          <Subtitulo>La teva finestra</Subtitulo>
+          <Subtitulo>La Teva Finestra</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
