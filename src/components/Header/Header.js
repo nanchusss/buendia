@@ -99,6 +99,7 @@ const Header = () => {
               fontSize: "33px",
               color: "#4D4D4D",
               fontWeight: "bold",
+              cursor: "pointer",
             }}
           >
             FINESTRACAT
