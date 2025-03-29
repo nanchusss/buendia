@@ -54,21 +54,19 @@ export const NavbarContainer = styled(Navbar)`
 
   @media (max-width: 767px) {
     flex-direction: column;
-    align-items: flex-end; /* Alinea todo a la derecha en mobile */
+    align-items: flex-end;
     padding: 15px;
   }
 `;
 
-export const MenuContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 15px;
+export const StyledCollapse = styled.div`
   width: 100%;
+  display: flex !important;
+  justify-content: flex-end;
 
   @media (max-width: 767px) {
     flex-direction: column;
-    align-items: flex-end; /* Alinea el menú a la derecha en mobile */
+    align-items: flex-end; /* Alinea el menú desplegable hacia la derecha */
   }
 `;
 
