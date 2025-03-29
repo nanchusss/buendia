@@ -108,6 +108,12 @@ const Quiz = () => {
               >
                 Instal.lació
               </OptionButton>
+              <OptionButton
+                variant="primary"
+                onClick={() => handleOptionSelect("Altres productes")}
+              >
+                Altres productes
+              </OptionButton>
             </Card.Body>
           </QuizCard>
         )}
@@ -168,7 +174,7 @@ const Quiz = () => {
             </Card.Body>
           </QuizCard>
         )}
-        {page === 4 && (
+        {/* {page === 4 && (
           <QuizCard>
             <Card.Body>
               <Title>¿T'interessa Alumini o PVC?</Title>
@@ -192,8 +198,8 @@ const Quiz = () => {
               </OptionButton>
             </Card.Body>
           </QuizCard>
-        )}
-        {page === 5 && (
+        )} */}
+        {page === 4 && (
           <QuizCard>
             <Card.Body>
               <Title>

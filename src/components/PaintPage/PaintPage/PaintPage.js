@@ -211,7 +211,7 @@ const PaintPage = () => {
           </GridItem>
           <GridItem>
             <Image src={ofrecer4} />
-            <StyledSubtitle>Pressupost sense cap compromís</StyledSubtitle>
+            <StyledSubtitle>Pressupost gratuït</StyledSubtitle>
           </GridItem>
         </Grid>
       </Container2>
