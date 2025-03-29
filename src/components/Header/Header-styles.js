@@ -101,3 +101,10 @@ export const styles = {
     marginLeft: "10px",
   },
 };
+export const HeaderSpacer = styled.div`
+  height: 120px;
+
+  @media (max-width: 767px) {
+    height: 100px;
+  }
+`;
