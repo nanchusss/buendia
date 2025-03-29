@@ -25,7 +25,13 @@ const HeaderSpacer = styled.div`
     height: 100px;
   }
 `;
+const ToggleWrapper = styled.div`
+  margin-left: auto;
 
+  @media (max-width: 767px) {
+    margin-left: auto;
+  }
+`;
 const Logo = styled.img`
   height: 80px;
   width: auto;
@@ -106,10 +112,12 @@ const Header = () => {
           </span>
         </Navbar.Brand>
 
-        <Navbar.Toggle
-          aria-controls="basic-navbar-nav"
-          onClick={() => setExpanded(!expanded)}
-        />
+        <ToggleWrapper>
+          <Navbar.Toggle
+            aria-controls="basic-navbar-nav"
+            onClick={() => setExpanded(!expanded)}
+          />
+        </ToggleWrapper>
 
         <Navbar.Collapse id="basic-navbar-nav">
           <MenuContainer>
