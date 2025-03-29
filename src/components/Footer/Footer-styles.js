@@ -24,7 +24,7 @@ export const FooterCard = styled(Card)`
 `;
 
 export const FooterTitle2 = styled(Card.Title)`
-  font-size: 18px;
+  font-size: 32px;
   margin: 4px 0;
   text-align: center;
 
@@ -35,7 +35,7 @@ export const FooterTitle2 = styled(Card.Title)`
 `;
 
 export const FooterTitle = styled(Card.Title)`
-  font-size: 14px;
+  font-size: 18px;
   margin: 2px 0;
   text-align: center;
 

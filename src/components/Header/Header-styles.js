@@ -20,41 +20,55 @@ export const Div = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 15px; /* Añade espacio entre los elementos */
+  gap: 15px;
 `;
 
 export const Logo = styled.img`
-  height: 80px; /* Ajustado a una proporción más adaptable */
-  width: auto; /* Mantiene la relación de aspecto */
-  margin: 10px; /* Añade espacio alrededor */
+  height: 80px;
+  width: auto;
+  margin: 10px;
   transition: transform 0.5s;
+  cursor: pointer;
 
   &:hover {
     transform: rotateX(360deg);
   }
 
   @media (max-width: 767px) {
-    margin: 5px; /* Reduce el margen en dispositivos pequeños */
+    margin: 5px;
   }
 `;
 
 export const NavbarContainer = styled(Navbar)`
-  padding: 10px 20px; /* Ajusta el espacio interno */
+  padding: 10px 20px;
   width: 100%;
-  height: auto; /* Ajusta automáticamente la altura */
+  height: auto;
   position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 10;
   top: 0;
-  background-color: #ffffff; /* Fondo blanco */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
   @media (max-width: 767px) {
-    flex-direction: column !important; /* Elementos en columna */
-    align-items: flex-start;
-    padding: 15px; /* Ajusta el padding para móviles */
+    flex-direction: column;
+    align-items: flex-end; /* Alinea todo a la derecha en mobile */
+    padding: 15px;
+  }
+`;
+
+export const MenuContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el menú a la derecha en mobile */
   }
 `;
 
@@ -69,7 +83,7 @@ export const Button1 = styled(Nav)`
     display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 10px; /* Espaciado entre los elementos */
+    gap: 10px;
     background-color: rgb(250, 247, 247);
   }
 `;
@@ -96,11 +110,6 @@ export const ButtonsHeader2 = styled.div`
   }
 `;
 
-export const styles = {
-  link: {
-    marginLeft: "10px",
-  },
-};
 export const HeaderSpacer = styled.div`
   height: 120px;
 
@@ -108,3 +117,9 @@ export const HeaderSpacer = styled.div`
     height: 100px;
   }
 `;
+
+export const styles = {
+  link: {
+    marginLeft: "10px",
+  },
+};
