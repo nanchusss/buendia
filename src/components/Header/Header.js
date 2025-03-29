@@ -1,10 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Button } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
 import styled from "styled-components";
 import LogoMarca from "..//.//../Images/Logo.jpeg";
 
-// Estilo adicional específico para asegurar prioridad
 const MenuContainer = styled.div`
   display: flex;
   justify-content: space-between;
@@ -13,26 +12,8 @@ const MenuContainer = styled.div`
   width: 100%;
 
   @media (max-width: 767px) {
-    flex-direction: column; /* Cambia a columna en mobile */
-    align-items: flex-start;
-  }
-`;
-
-const NavbarContainer = styled(Navbar)`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background-color: #ffffff;
-  padding: 20px 30px;
-  position: fixed;
-  top: 0;
-  z-index: 10;
-
-  @media (max-width: 767px) {
-    flex-direction: column; /* Cambia a columna en mobile */
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el menú a la derecha en mobile */
   }
 `;
 
@@ -57,7 +38,7 @@ const Button1 = styled(Button)`
 
   @media (max-width: 767px) {
     margin: 5px 0;
-    text-align: left;
+    text-align: right;
     font-size: 18px;
   }
 `;
@@ -65,20 +46,40 @@ const Button1 = styled(Button)`
 const Header = () => {
   const navigate = useNavigate();
   const location = useLocation();
+  const [expanded, setExpanded] = useState(false); // Control del menú
 
   const handleNavigation = (path) => {
     if (location.pathname === path) {
-      // Forzar una actualización "manual"
       navigate("/", { replace: true });
       setTimeout(() => navigate(path), 0);
     } else {
       navigate(path);
     }
+
+    // Cierra el menú en mobile
+    setExpanded(false);
   };
 
   return (
-    <NavbarContainer bg="light" expand="lg" className="mb-5">
-      {/* Logo y título */}
+    <Navbar
+      bg="light"
+      expand="lg"
+      expanded={expanded}
+      className="mb-5"
+      style={{
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        alignItems: "center",
+        width: "100%",
+        backgroundColor: "#ffffff",
+        padding: "20px 30px",
+        position: "fixed",
+        top: 0,
+        zIndex: 10,
+      }}
+    >
+      {/* Logo */}
       <Navbar.Brand
         onClick={() => handleNavigation("/")}
         style={{ display: "flex", alignItems: "center" }}
@@ -95,9 +96,13 @@ const Header = () => {
         </span>
       </Navbar.Brand>
 
-      {/* Toggle para mobile */}
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      {/* Toggle */}
+      <Navbar.Toggle
+        aria-controls="basic-navbar-nav"
+        onClick={() => setExpanded(!expanded)}
+      />
 
+      {/* Menú */}
       <Navbar.Collapse id="basic-navbar-nav">
         <MenuContainer>
           <Button1 onClick={() => handleNavigation("/inici")}>Inici</Button1>
@@ -113,11 +118,11 @@ const Header = () => {
             style={{ whiteSpace: "nowrap" }}
             onClick={() => handleNavigation("/quizz")}
           >
-            Sol.licitar pressupost
+            Sol·licitar pressupost
           </Button>
         </MenuContainer>
       </Navbar.Collapse>
-    </NavbarContainer>
+    </Navbar>
   );
 };
 
