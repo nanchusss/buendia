@@ -1,12 +1,6 @@
 import React from "react";
-import { Container, Row, Col, Carousel } from "react-bootstrap";
-import {
-  StyledContainer,
-  StyledHeader,
-  Title,
-  Description,
-  StyledCarousel,
-} from "./Productes-Styles";
+import { Row, Col, Carousel } from "react-bootstrap";
+import { StyledContainer, StyledCarousel } from "./Productes-Styles";
 
 const Productes = () => {
   return (

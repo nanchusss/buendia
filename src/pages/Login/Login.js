@@ -11,7 +11,7 @@ const Login = () => {
   console.log(alreadyLogged);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [setLoggedIn] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
