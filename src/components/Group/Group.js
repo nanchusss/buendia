@@ -64,7 +64,7 @@ const Group = () => {
                 padding: "10px 15px", // Más espaciado interno
                 marginTop: "8px",
                 borderRadius: "8px", // Bordes más redondeados
-                backgroundColor: "#7895b479", // Azul petróleo oscuro
+                backgroundColor: "#0a498da6", // Azul petróleo oscuro
                 display: "inline-block", // Para asegurarte que se comporta como un botón
                 textAlign: "center", // Centra el texto
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Sombra ligera
@@ -72,10 +72,10 @@ const Group = () => {
                 transition: "background-color 0.3s ease", // Animación para el hover
               }}
               onMouseOver={(e) =>
-                (e.currentTarget.style.backgroundColor = "#7895b4a6")
+                (e.currentTarget.style.backgroundColor = "#488ed979")
               } // Color más oscuro al pasar el mouse
               onMouseOut={(e) =>
-                (e.currentTarget.style.backgroundColor = "#6890b45e")
+                (e.currentTarget.style.backgroundColor = "#0a498da6")
               } // Vuelve al color original
             >
               Veure més
@@ -109,7 +109,7 @@ const Group = () => {
                 padding: "10px 15px", // Más espaciado interno
                 marginTop: "8px",
                 borderRadius: "8px", // Bordes más redondeados
-                backgroundColor: "#7895b479", // Azul petróleo oscuro
+                backgroundColor: "#0a498da6", // Azul petróleo oscuro
                 display: "inline-block", // Para asegurarte que se comporta como un botón
                 textAlign: "center", // Centra el texto
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Sombra ligera
@@ -117,10 +117,10 @@ const Group = () => {
                 transition: "background-color 0.3s ease", // Animación para el hover
               }}
               onMouseOver={(e) =>
-                (e.currentTarget.style.backgroundColor = "#7895b4a6")
+                (e.currentTarget.style.backgroundColor = "#488ed979")
               } // Color más oscuro al pasar el mouse
               onMouseOut={(e) =>
-                (e.currentTarget.style.backgroundColor = "#6890b45e")
+                (e.currentTarget.style.backgroundColor = "#0a498da6")
               } // Vuelve al color original
             >
               Veure més
@@ -149,7 +149,7 @@ const Group = () => {
                 padding: "10px 15px", // Más espaciado interno
                 marginTop: "8px",
                 borderRadius: "8px", // Bordes más redondeados
-                backgroundColor: "#7895b479", // Azul petróleo oscuro
+                backgroundColor: "#0a498da6", // Azul petróleo oscuro
                 display: "inline-block", // Para asegurarte que se comporta como un botón
                 textAlign: "center", // Centra el texto
                 boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)", // Sombra ligera
@@ -157,10 +157,10 @@ const Group = () => {
                 transition: "background-color 0.3s ease", // Animación para el hover
               }}
               onMouseOver={(e) =>
-                (e.currentTarget.style.backgroundColor = "#7895b4a6")
+                (e.currentTarget.style.backgroundColor = "#488ed979")
               } // Color más oscuro al pasar el mouse
               onMouseOut={(e) =>
-                (e.currentTarget.style.backgroundColor = "#6890b45e")
+                (e.currentTarget.style.backgroundColor = "#0a498da6")
               } // Vuelve al color original
             >
               Veure més

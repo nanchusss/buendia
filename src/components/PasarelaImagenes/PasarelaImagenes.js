@@ -27,7 +27,7 @@ function PasarelaImagenes() {
 
         <Carousel.Caption>
           <Titulo>FINESTRACAT</Titulo>
-          <Subtitulo>La Teva Finestra</Subtitulo>
+          <Subtitulo>La teva finestra!</Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -38,8 +38,11 @@ function PasarelaImagenes() {
         />
 
         <Carousel.Caption>
-          <Titulo>Inspira't i crea</Titulo>
-          <Subtitulo>Dona-li vida a la teva casa amb FINESTRACAT</Subtitulo>
+          <Titulo>A tota Catalunya</Titulo>
+          <Subtitulo>
+            Treballem a tota Catalunya per apropar-te solucions de confiança i
+            qualitat.
+          </Subtitulo>
         </Carousel.Caption>
       </Carousel.Item>
     </Pasarela>
